@@ -42,8 +42,8 @@ def save_data():
     file.write("Nama : " + nama_info + "\n")
     file.write("NIM : " + nim_info + "\n")
     file.write("Jurusan : " + jurusan_info + "\n")
-    file.write("Kelas : " + kelas_info + "\n")
-    file.write("Jenis Kelamin : " + jk_info + "\n")
+    # file.write("Kelas : " + kelas_info + "\n")
+    # file.write("Jenis Kelamin : " + jk_info + "\n")
 
     file.close()
 
@@ -138,39 +138,34 @@ l4.grid(row=3, column=0, padx=10, pady=10)
 variable = StringVar(root)
 variable.set(CLASS[0])  # default value
 
-kelas_entry = OptionMenu(frame1, variable=kelas, *CLASS)
-kelas_entry.grid(row=3, column=1, padx=10, pady=10)
+kelas_input = OptionMenu(frame1, *CLASS)
+kelas_input.grid(row=3, column=1, padx=10, pady=10)
 
 l5 = Label(frame1, text="Jenis Kelamin : ", font=(16))
 l5.grid(row=4, column=0)
 
 
-R1 = Radiobutton(frame1, text="Perempuan",
-                 textvariable=jk, variable=jk, value=1)
+R1 = Radiobutton(frame1, text="Perempuan", variable=jk, value=1)
 R1.grid(row=4, column=1)
 
-R2 = Radiobutton(frame1, text="Laki-laki",
-                 textvariable=jk, variable=jk, value=2)
+R2 = Radiobutton(frame1, text="Laki-laki", variable=jk, value=2)
 R2.grid(row=4, column=2)
 
 l6 = Label(frame1, text="Warna Favorit : ", font=(16))
 l6.grid(row=5, column=0)
 
 
-CB1 = Checkbutton(frame1, text="hitam",  textvariable=warna1,
-                  variable=warna1, onvalue=1, offvalue=0)
+CB1 = Checkbutton(frame1, text="hitam", variable=warna1, onvalue=1, offvalue=0)
 CB1.grid(row=5, column=1)
 
-CB2 = Checkbutton(frame1, text="merah", textvariable=warna2,
-                  variable=warna2, onvalue=1, offvalue=0)
+CB2 = Checkbutton(frame1, text="merah", variable=warna2, onvalue=1, offvalue=0)
 CB2.grid(row=5, column=2)
 
-CB3 = Checkbutton(frame1, text="kuning", textvariable=warna3,
+CB3 = Checkbutton(frame1, text="kuning",
                   variable=warna3, onvalue=1, offvalue=0)
 CB3.grid(row=5, column=3)
 
-CB4 = Checkbutton(frame1, text="hijau", textvariable=warna4,
-                  variable=warna4, onvalue=1, offvalue=0)
+CB4 = Checkbutton(frame1, text="hijau", variable=warna4, onvalue=1, offvalue=0)
 CB4.grid(row=5, column=4)
 
 ################################### BUTTON ###########################################
